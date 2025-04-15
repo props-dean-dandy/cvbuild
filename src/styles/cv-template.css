@@ -1,0 +1,241 @@
+/* CV Template Styles */
+.cv-template {
+  font-family: 'Inter', sans-serif;
+  color: #000;
+  background-color: #fff;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  print-color-adjust: exact;
+  -webkit-print-color-adjust: exact;
+}
+
+.cv-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  min-height: 100vh;
+}
+
+/* Left Column */
+.left-column {
+  background-color: #e8e0d6;
+  padding: 2rem;
+  position: relative;
+}
+
+.profile-photo-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.profile-photo {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.contact-info {
+  border-top: 1px solid #999;
+  border-bottom: 1px solid #999;
+  padding: 1rem 0;
+  margin-bottom: 2rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 0.5rem 0;
+  position: relative;
+}
+
+.contact-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 1rem;
+  color: #000;
+}
+
+.section {
+  margin-bottom: 2rem;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #999;
+}
+
+.skills-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.skill-item, .summary-item, .experience-point {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.asterisk {
+  font-size: 1.5rem;
+  line-height: 1;
+  margin-right: 0.5rem;
+}
+
+.certification-item, .membership-item {
+  margin-bottom: 1rem;
+}
+
+.cert-header, .membership-header, .experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.cert-header h3, .membership-header h3 {
+  font-weight: 600;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.date-badge, .year-badge {
+  background-color: #556052;
+  color: #fff;
+  padding: 0.25rem 0.75rem;
+  border-radius: 2rem;
+  font-size: 0.875rem;
+}
+
+.cert-organization, .membership-organization {
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+/* Right Column */
+.right-column {
+  background-color: #fff;
+  padding: 2rem;
+  position: relative;
+}
+
+.header {
+  background-color: #556052;
+  color: #fff;
+  padding: 2rem;
+  margin: -2rem -2rem 2rem -2rem;
+}
+
+.name {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0;
+  margin-bottom: 0.5rem;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin: 0;
+  margin-bottom: 1rem;
+}
+
+.divider {
+  width: 3rem;
+  height: 2px;
+  background-color: #fff;
+  margin-bottom: 1rem;
+}
+
+.summary {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.summary-points, .experience-points {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.education-item {
+  margin-bottom: 1rem;
+}
+
+.education-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.education-top h3 {
+  font-weight: 600;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.education-bottom {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+
+.education-divider {
+  height: 1px;
+  background-color: #ddd;
+  margin: 1rem 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .cv-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .left-column {
+    order: 2;
+  }
+  
+  .right-column {
+    order: 1;
+  }
+}
+
+/* PDF Export Optimizations */
+@media print {
+  .cv-template {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .cv-container {
+    min-height: auto;
+    height: 100%;
+  }
+  
+  .left-column {
+    background-color: #e8e0d6 !important;
+  }
+  
+  .header {
+    background-color: #556052 !important;
+    color: #fff !important;
+  }
+  
+  .date-badge, .year-badge {
+    background-color: #556052 !important;
+    color: #fff !important;
+  }
+}
